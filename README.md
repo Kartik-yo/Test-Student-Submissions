@@ -2,9 +2,6 @@
 
 I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, Terraform, and CI/CD. Currently working on cloud infrastructure projects and always learning new tools in the DevOps world.
 
-- 🔭 I’m currently working on [specific project]
-- 🌱 I’m currently learning [skills you're focused on]
-- 💬 Ask me about Cloud Networking, DevOps, and AWS
 - 📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/kashinath-meshram-837893180/) or [Twitter](https://x.com/KashinathMeshr2)
 
 ---
@@ -18,13 +15,6 @@ I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, 
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-![Kashinath's GitHub stats](https://github-readme-stats.vercel.app/api?username=Kartik-yo&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kartik-yo&layout=compact&theme=radical)
 
 ---
 
