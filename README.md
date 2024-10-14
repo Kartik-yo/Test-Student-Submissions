@@ -30,10 +30,25 @@ I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, 
 
 ## 🚀 Featured Projects
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Kartik-yo&repo=CRONDA)](https://github.com/Kartik-yo/CRONDA)
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Kartik-yo&repo=DevOps-Project)](https://github.com/Kartik-yo/DevOps-Project)
+### 1. [Infrastructure Automation with Terraform](https://github.com/Kartik-yo/terraform-repo)
+   - Automated the provisioning of AWS resources like EC2, S3, VPC, and RDS using Terraform.
+   - Ensured consistent, repeatable deployments with infrastructure as code principles.
 
----
+### 2. [CI/CD Pipeline Automation](https://github.com/Kartik-yo/ci-cd-repo)
+   - Built CI/CD pipelines using Jenkins and GitHub Actions to automate build, test, and deployment.
+   - Accelerated software delivery with fully automated workflows.
+
+### 3. [Java Project](https://github.com/Kartik-yo/java-repo)
+   - Created a Java-based application, focusing on OOP principles, clean architecture, and design patterns.
+   - Implemented features like user authentication, database management, and file handling.
+
+### 4. [Automated Deployments & Server Management](https://github.com/Kartik-yo/server-management-repo)
+   - Developed scripts for automated deployment and server configuration, enhancing system reliability.
+   - Used Python and Bash to automate routine tasks, reducing manual intervention.
+     
+### 5. [Cronda (under progress)](https://github.com/Kartik-yo/CRONDA)
+   - The project aims to automate the identification, categorization, deletion of empty S3 buckets, and logging of actions for future reference. The entire workflow is triggered by a scheduled cron job.
+
 
 ## 📈 Contribution Graph
 
