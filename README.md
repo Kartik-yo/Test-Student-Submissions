@@ -36,7 +36,7 @@ I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, 
    - Developed scripts for automated deployment and server configuration, enhancing system reliability.
    - Used Python and Bash to automate routine tasks, reducing manual intervention.
      
-### 5. [Cronda (under progress)](https://github.com/Kartik-yo/CRONDA)
+### 5. [Cronda](https://github.com/Kartik-yo/CRONDA)
    - The project aims to automate the identification, categorization, deletion of empty S3 buckets, and logging of actions for future reference. The entire workflow is triggered by a scheduled cron job.
 
 
@@ -56,8 +56,7 @@ I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, 
 
 ## 💡 Fun Fact
 
-- I'm always excited to try new tools in the DevOps ecosystem.
-- I enjoy playing chess in my free time.
+- I'm always excited to try new tools in the DevOps ecosystem and projects related to them.
 
 ---
 
