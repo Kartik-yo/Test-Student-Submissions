@@ -1,63 +1,72 @@
-## Hi, I'm Kashinath Meshram! 👋
+# Kashinath Meshram
 
-I'm a passionate Cloud & DevOps Engineer with experience in Kubernetes, Docker, Terraform, and CI/CD. Currently working on cloud infrastructure projects and always learning new tools in the DevOps world.
+📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com | 📞 8999540880 | 🔗 [GitHub](https://github.com/Kartik-yo) | 📄 [View Resume](https://your-resume-link-here.com)
 
-- 📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/kashinath-meshram-837893180/) or [Twitter](https://x.com/KashinathMeshr2)
+## 👨‍💻 DevOps Engineer
+
+DevOps Engineer with over 1 year of hands-on experience in AWS, Terraform, Docker, and CI/CD automation, focused on optimizing cloud infrastructure and enhancing system scalability.
+
+## 🚀 Experience
+
+### DevOps Intern | BootCoding Pvt. Ltd., Nagpur, Maharashtra
+*Sep 2024 – Present*
+
+- Automated cloud infrastructure deployments using Terraform and managed AWS services such as EC2, S3, and RDS.
+- Built and maintained CI/CD pipelines using Jenkins and GitLab for automated testing and deployments.
+- Deployed scalable applications using Docker and Kubernetes, ensuring high availability and reliability.
+
+### DevOps Intern | Intellipaat Software Solution Pvt. Ltd., Bangalore, Karnataka
+*Aug 2023 – Aug 2024*
+
+- Managed infrastructure provisioning with Terraform and Docker, overseeing cloud deployments.
+- Automated deployments using Ansible and Python, improving system efficiency.
+- Implemented security best practices and RBAC for cloud environments.
+
+## 💼 Skills
+
+☁️ AWS | 🐙 Git | 🐳 Docker | 🏗️ Terraform | 🎭 Ansible | 🔧 Jenkins | ☸️ Kubernetes | 
+🐘 PostgreSQL | 🍃 MongoDB | 🔍 Prometheus | 📊 Grafana | ☁️ CloudWatch | 
+🛡️ SonarQube | 🔒 Trivy | 🐚 Bash | 🐍 Python | 📄 YAML | 🔐 Vault | ⛵ Helm | 🐹 Golang
+
+## 🛠️ Projects
+
+### [1. Netflix Clone DevSecOps Project](https://github.com/Kartik-yo/Netflix-Clone-DevSecOps-Project)
+- Configured Jenkins CI/CD pipeline for automated Netflix clone deployment on AWS
+- Integrated SonarQube for static code analysis and security scanning
+- Utilized Docker and Kubernetes for containerization and orchestration
+
+### [2. CRONDA - AWS Resource Optimization and Monitoring](https://github.com/Kartik-yo/CRONDA)
+- Designed system to monitor and clear unused AWS resources using S3, CloudWatch, Lambda, and EC2
+- Implemented real-time alerts with AWS SNS and automated CI/CD with GitHub Actions
+- Optimized Lambda functions and CloudWatch metrics for improved efficiency
+
+### [3. Kubernetes Orchestration Projects](https://github.com/Kartik-yo/Kubernetes-Orchestration-Projects)
+- Deployed microservices using Kubernetes for improved scalability and fault tolerance
+- Automated infrastructure management with Helm charts for consistent deployments
+- Implemented Prometheus and Grafana for comprehensive cluster monitoring
+
+### [4. Serverless AWS Project](https://github.com/Kartik-yo/Serverless-AWS-Project)
+- Built serverless applications using AWS Lambda, API Gateway, and DynamoDB
+- Implemented cost-efficient solutions for processing and storing user data
+- Automated deployment using CloudFormation for faster infrastructure provisioning
+
+### [5. CI/CD with Jenkins and Docker](https://github.com/Kartik-yo/CICD-Jenkins-Docker)
+- Developed Jenkins CI/CD pipeline for automating Docker containerized application deployments
+- Configured Azure Pipelines for cloud-based continuous integration and deployment
+- Utilized Docker Compose for streamlined multi-container application management
+
+## 📜 Certifications
+
+- [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/your-badge-id-here)
+- [DevOps Training - Intellipaat Software Solutions Pvt. Ltd.](https://github.com/Kartik-yo/Certifications/blob/main/DevOps_Training_Certificate.pdf)
+
+## 🎓 Education
+
+**B.E., Rashtrasant Tukadoji Maharaj Nagpur University**
+- GPA: 7.76/10
+- Skills: AWS, Python, IoT, Arduino UNO
+- Graduated: June 2023
 
 ---
 
-## 🛠️ My Tech Stack
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
----
-
-## 🚀 Featured Projects
-
-### 1. [Infrastructure Automation with Terraform](https://github.com/Kartik-yo/terraform-repo)
-   - Automated the provisioning of AWS resources like EC2, S3, VPC, and RDS using Terraform.
-   - Ensured consistent, repeatable deployments with infrastructure as code principles.
-
-### 2. [CI/CD Pipeline Automation](https://github.com/Kartik-yo/ci-cd-repo)
-   - Built CI/CD pipelines using Jenkins and GitHub Actions to automate build, test, and deployment.
-   - Accelerated software delivery with fully automated workflows.
-
-### 3. [Java Project](https://github.com/Kartik-yo/java-repo)
-   - Created a Java-based application, focusing on OOP principles, clean architecture, and design patterns.
-   - Implemented features like user authentication, database management, and file handling.
-
-### 4. [Automated Deployments & Server Management](https://github.com/Kartik-yo/server-management-repo)
-   - Developed scripts for automated deployment and server configuration, enhancing system reliability.
-   - Used Python and Bash to automate routine tasks, reducing manual intervention.
-     
-### 5. [Cronda](https://github.com/Kartik-yo/CRONDA)
-   - The project aims to automate the identification, categorization, deletion of empty S3 buckets, and logging of actions for future reference. The entire workflow is triggered by a scheduled cron job.
-
-
-## 📈 Contribution Graph
-
-![Kashinath's Contribution Graph](https://activity-graph.herokuapp.com/graph?username=Kartik-yo&theme=github)
-
----
-
-## 🎓 Certifications & Achievements
-
-- Certified Kubernetes Administrator (in progress)
-- AWS Certified Solutions Architect (Associate)
-- [Link to DevOps Training Certificate](link-to-certification)
-
----
-
-## 💡 Fun Fact
-
-- I'm always excited to try new tools in the DevOps ecosystem and projects related to them.
-
----
-
-![Profile Views](https://komarev.com/ghpvc/?username=Kartik-yo)
+Feel free to reach out for collaborations or just a chat about DevOps and cloud technologies!
