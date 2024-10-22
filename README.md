@@ -1,4 +1,4 @@
-<p align="center" font-size="40px">Kashinath Meshram</p>
+<p align="center" font-size="80px"><h1>Kashinath Meshram</h1></p>
 <p align="center" font-size="20px">hi and welcome to My GitHub Profile!</p>
 
 <p align="center">📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com  </p>
