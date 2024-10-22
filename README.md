@@ -29,9 +29,9 @@ Long-term: Lead innovative DevOps initiatives and mentor aspiring engineers in t
 🔧 **Proficiency:** ☁️ AWS | 🐙 Git | 🐳 Docker | 🏗️ Terraform | 🎭 Ansible | 🔧 Jenkins | ☸️ Kubernetes<br>
 🗄️ **Databases:** 🐬 MySQL | 🐘 PostgreSQL | 🍃 MongoDB<br>
 📊 **Monitoring:** 🔍 Prometheus | 📈 Grafana | ☁️ CloudWatch<br>
-🔒 **Security:** 🛡️ SonarQube | 🔐 Trivy<br>
+🔒 **Security:** 🛡️ SonarQube | 🔐 Trivy <br>
 🖥️ **Languages:** 🐚 Bash | 🐍 Python | 📄 YAML<br>
-🛠️ **Others:** 🔐 Vault | ⛵ Helm Chart | 🐹 Golang<br>
+🛠️ **Others:** 🔐 Vault | ⛵ Helm Chart | 🐹 Golang | 🏃‍♂️ Github Actions<br>
 
 
 ## 🛠️ Projects
