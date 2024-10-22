@@ -1,4 +1,4 @@
-<p align="center"><h1>Kashinath Meshram</h1></p><br><p align="center"><h2>hi and welcome to My GitHub Profile!</h2></p>
+<p align="center"><h1>Kashinath Meshram</h1></p><p align="center"><h2>hi and welcome to My GitHub Profile!</h2></p>
 
 <p align="center">📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com | </p><p align="center" herf="https://github.com/Kartik-yo">🔗 GitHub | </p><p align="center" href="https://your-resume-link-here.com">📄 View Resume</p>
  <p align="center"><img src="https://komarev.com/ghpvc/?username=kartik-yo&label=Profile%20views&color=0e75b6&style=flat" alt="kartik-yo" /> </p>
