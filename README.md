@@ -1,4 +1,4 @@
-<h1 align="center" >Hi I'm Kashinath Meshram & Weclome tomy github profile!</h1>
+<h1 align="center" >Hi, I'm Kashinath Meshram & Weclome to my github profile!</h1>
 
 <p align="center">📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com  </p><p
  <p align="center"><img src="https://komarev.com/ghpvc/?username=kartik-yo&label=Profile%20views&color=0e75b6&style=flat" alt="kartik-yo" /> </p>
@@ -7,9 +7,6 @@
 
 Short-term: Master cloud-native technologies and contribute to open-source projects.<br>
 Long-term: Lead innovative DevOps initiatives and mentor aspiring engineers in the field.
-
-
-DevOps Engineer with over 1 year of hands-on experience in AWS, Terraform, Docker, and CI/CD automation, focused on optimizing cloud infrastructure and enhancing system scalability.
 
 ## 🚀 Experience
 
