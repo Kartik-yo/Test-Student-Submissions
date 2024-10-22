@@ -1,5 +1,5 @@
-<p align="center">Kashinath Meshram/p>
-<p align="center">hi and welcome to My GitHub Profile!</p>
+<p align="center" font-size="40px">Kashinath Meshram</p>
+<p align="center" font-size="20px">hi and welcome to My GitHub Profile!</p>
 
 <p align="center">📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com  </p>
  <p align="center"><img src="https://komarev.com/ghpvc/?username=kartik-yo&label=Profile%20views&color=0e75b6&style=flat" alt="kartik-yo" /> </p>
