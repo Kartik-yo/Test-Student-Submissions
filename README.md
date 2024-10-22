@@ -1,6 +1,8 @@
-# Kashinath Meshram
+<p align="center">#Kashinath Meshram
+# hi and welcome to My GitHub Profile!
 
-📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com | 📞 8999540880 | 🔗 [GitHub](https://github.com/Kartik-yo) | 📄 [View Resume](https://your-resume-link-here.com)
+📍 Nagpur, Maharashtra | 📧 kartikmesh2406@gmail.com | 🔗 [GitHub](https://github.com/Kartik-yo) | 📄 [View Resume](https://your-resume-link-here.com)
+ <img src="https://komarev.com/ghpvc/?username=kartik-yo&label=Profile%20views&color=0e75b6&style=flat" alt="kartik-yo" /> </p>
 
 ## 👨‍💻 DevOps Engineer
 
