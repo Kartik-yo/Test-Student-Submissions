@@ -59,8 +59,8 @@ Long-term: Lead innovative DevOps initiatives and mentor aspiring engineers in t
 
 ## 📜 Certifications
 
-- [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/your-badge-id-here)
-- [DevOps Training - Intellipaat Software Solutions Pvt. Ltd.](https://github.com/Kartik-yo/Certifications/blob/main/DevOps_Training_Certificate.pdf)
+- <a align=left href="https://lms.intellipaat.com/certificate-link/?Yz05MTExOCZ1PTIzNDI1MCZleHQ9MQ==">AWS Certified Solutions Architect - Associate</a>
+- <a align=left href="https://lms.intellipaat.com/certificate-link/?Yz01ODYzMCZ1PTIzNDI1MCZleHQ9MQ==">DevOps Training - Intellipaat Software Solutions Pvt. Ltd.</a>
 
 ## 🎓 Education
 
