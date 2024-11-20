@@ -1,4 +1,4 @@
-student1/https://github.com/Adityaraut2003/task-submissions.git
+student1/repo
 student2/repo
 student3/repo
 student4/repo
