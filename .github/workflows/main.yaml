@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'temurin'
 
       # Convert repositories.txt to JSON (Optional if REPO_LIST secret is already added)
       - name: Convert repositories.txt to JSON
