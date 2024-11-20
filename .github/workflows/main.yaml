@@ -1,84 +1,66 @@
-name: Build and Run Java Project on Multiple Repos
+name: CI/CD Pipeline
 
 on:
-#  workflow_dispatch:
+#  workflow_dispatch: # Enables manual trigger of the workflow from the GitHub Actions interface
   push:
-    branches:
-      - main  # Trigger workflow on pushes to the main branch
-#  pull_request:
-#    branches:
-#      - main  # Trigger workflow on pull requests targeting main
+     branches:
+         - main
 
 jobs:
-  build-run:
+  test-and-analyze:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
+      # Checkout the repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up JDK
-      - name: Set up JDK
+      # Setup Java environment
+      - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
-          java-version: '11'  # Specify Java version
-          distribution: 'temurin'
+          java-version: '11'
 
-      # Step 3: Cache Maven dependencies
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
-      # Step 4: Convert repositories.txt to JSON array
-      - name: Convert repositories.txt to JSON array
-       id: convert_repos
+      # Convert repositories.txt to JSON (Optional if REPO_LIST secret is already added)
+      - name: Convert repositories.txt to JSON
+        id: convert-repos
         run: |
-#          # Read the repositories.txt file and convert it to a JSON array format
-          REPO_LIST=$(cat repositories.txt | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          echo "REPO_LIST=$REPO_LIST" >> $GITHUB_ENV  # Set REPO_LIST as an environment variable
+          repos=$(cat repositories.txt | jq -R . | jq -s .)
+          echo "::set-output name=json::$repos"
+        shell: bash
+        env:
+          REPO_FILE: repositories.txt
 
-      # Step 5: Loop through each repository in the list and build/test it
-      - name: Run Build, Tests, and Code Checks on Multiple Repos
+      # Export REPO_LIST secret
+      - name: Set REPO_LIST Secret
         run: |
- #         # Convert the REPO_LIST from the environment variable to an array
-         REPOS=($REPO_LIST)
-          for REPO in "${REPOS[@]}"; do
-            echo "Processing $REPO..."
+          echo ${{ steps.convert-repos.outputs.json }}
 
-            # Clone the repository
-            git clone https://github.com/$REPO.git
+      # Build and test with Maven
+      - name: Build and Test with Maven
+        run: mvn clean verify
 
-            # Navigate into the cloned repository
-            cd $(basename $REPO)
+      # Run Checkstyle
+      - name: Run Checkstyle
+        run: mvn checkstyle:check
 
-            # Step 6: Run Maven clean, install, test, and JaCoCo code coverage
-           mvn clean install jacoco:prepare-agent jacoco:report
+      # Run JaCoCo and generate coverage report
+      - name: Generate Coverage Report
+        run: mvn jacoco:report
 
-            # Step 7: Run Checkstyle plugin for code quality
-            mvn checkstyle:checkstyle
-
-            # Step 8: SonarQube/Cloud analysis (SonarCloud)
-            # Make sure you set up your SONAR_TOKEN as a secret in GitHub repository
-            mvn sonar:sonar \
-              -Dsonar.projectKey=$REPO \
-              -Dsonar.organization=<your-org> \
-              -Dsonar.host.url=https://sonarcloud.io \
-              -Dsonar.login=$SONAR_TOKEN
-
-            # Step 9: Optionally, run the Main class if necessary
-#            java -cp target/$(basename $REPO)-1.0-SNAPSHOT.jar app.Main
-
-            # Go back to the root directory for the next iteration
-   #         done
-
-      # Step 10: Upload Code Coverage Results to GitHub Actions (Optional, if you want to see coverage results in Actions)
-      - name: Upload JaCoCo Code Coverage to GitHub Actions
-        if: success()
+      # Upload JaCoCo coverage to Codecov
+      - name: Upload to Codecov
         uses: codecov/codecov-action@v3
         with:
-          file: target/site/jacoco/jacoco.xml  # Specify the JaCoCo report file
+          files: target/site/jacoco/jacoco.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      # SonarQube analysis
+      - name: SonarQube Scan
+        uses: sonarsource/sonarcloud-github-action@v1
+        with:
+          args: >
+            -Dsonar.projectKey=your_project_key
+            -Dsonar.organization=your_organization_name
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
