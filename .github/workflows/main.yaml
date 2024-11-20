@@ -35,29 +35,29 @@ jobs:
             ${{ runner.os }}-maven-
 
       # Step 4: Convert repositories.txt to JSON array
-#      - name: Convert repositories.txt to JSON array
-#       id: convert_repos
-#        run: |
+      - name: Convert repositories.txt to JSON array
+       id: convert_repos
+        run: |
 #          # Read the repositories.txt file and convert it to a JSON array format
-#          REPO_LIST=$(cat repositories.txt | jq -R -s -c 'split("\n") | map(select(length > 0))')
-#          echo "REPO_LIST=$REPO_LIST" >> $GITHUB_ENV  # Set REPO_LIST as an environment variable
+          REPO_LIST=$(cat repositories.txt | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "REPO_LIST=$REPO_LIST" >> $GITHUB_ENV  # Set REPO_LIST as an environment variable
 
       # Step 5: Loop through each repository in the list and build/test it
       - name: Run Build, Tests, and Code Checks on Multiple Repos
         run: |
  #         # Convert the REPO_LIST from the environment variable to an array
-#         REPOS=($REPO_LIST)
- #         for REPO in "${REPOS[@]}"; do
-  #          echo "Processing $REPO..."
+         REPOS=($REPO_LIST)
+          for REPO in "${REPOS[@]}"; do
+            echo "Processing $REPO..."
 
             # Clone the repository
-#            git clone https://github.com/$REPO.git
+            git clone https://github.com/$REPO.git
 
             # Navigate into the cloned repository
- #           cd $(basename $REPO)
+            cd $(basename $REPO)
 
             # Step 6: Run Maven clean, install, test, and JaCoCo code coverage
-           mvn clean install #jacoco:prepare-agent jacoco:report
+           mvn clean install jacoco:prepare-agent jacoco:report
 
             # Step 7: Run Checkstyle plugin for code quality
             mvn checkstyle:checkstyle
@@ -74,8 +74,7 @@ jobs:
 #            java -cp target/$(basename $REPO)-1.0-SNAPSHOT.jar app.Main
 
             # Go back to the root directory for the next iteration
- #           cd ..
- #         done
+   #         done
 
       # Step 10: Upload Code Coverage Results to GitHub Actions (Optional, if you want to see coverage results in Actions)
       - name: Upload JaCoCo Code Coverage to GitHub Actions
