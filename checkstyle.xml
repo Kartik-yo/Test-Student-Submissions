@@ -5,6 +5,7 @@
         <!-- Other Checkstyle checks you want to enable can be listed here -->
         <module name="LineLength">
             <property name="max" value="120"/>
+            <property name="ignorePattern" value="^package|^import"/>
         </module>
 
         <!-- You can add more checks here if needed -->
