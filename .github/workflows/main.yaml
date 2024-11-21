@@ -1,7 +1,10 @@
 name: Test Submissions
 
 on:
-  workflow_dispatch: # Manual trigger for flexibility
+#  workflow_dispatch: # Manual trigger for flexibility
+  push:
+    branches:
+       - main
 
 jobs:
   test-submissions:
