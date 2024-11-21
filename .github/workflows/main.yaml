@@ -29,7 +29,7 @@ jobs:
         mkdir -p submissions
         while IFS= read -r repo; do
           echo "Cloning $repo..."
-          git clone "https://github.com/$repo.git" submissions/$(basename $repo)
+          git clone "https://github.com/Adityaraut2003/task-submissions.git" submissions/$(basename $repo)
         done < repositories.txt
 
     # 4. Iterate through each cloned repository
