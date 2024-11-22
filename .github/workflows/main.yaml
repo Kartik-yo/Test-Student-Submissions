@@ -9,11 +9,14 @@ env:
 
 
 on:
-  workflow_dispatch:
-    inputs:
-      sonar_token:
-        description: 'SonarQube Token'
-        required: true
+  push:
+    branches:
+      - main
+ # workflow_dispatch:
+ #   inputs:
+ #     sonar_token:
+ #       description: 'SonarQube Token'
+ #       required: true
 
 jobs:
   test-submissions:
