@@ -33,7 +33,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: ${{ fromJson(env.REPO_LIST)[0] }} # Replace 0 with index in a loop
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.REPO_GITHUB_TOKEN }}
 
     - name: Run Maven Tests
       run: |
