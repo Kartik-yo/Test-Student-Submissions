@@ -1,5 +1,13 @@
 name: Test Student Submissions
 
+env:
+  JAVA_VERSION: "11"
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  SONAR_PROJECT_KEY: "submission-project"
+  SONAR_ORG: "organization-key"
+  SONAR_HOST_URL: "https://sonarcloud.io"
+
+
 on:
   workflow_dispatch:
     inputs:
