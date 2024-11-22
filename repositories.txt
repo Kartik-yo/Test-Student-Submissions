@@ -1,5 +1,3 @@
-student1/repo
+Adityaraut2003/task-submissions
 student2/repo
 student3/repo
-student4/repo
-student5/repo
