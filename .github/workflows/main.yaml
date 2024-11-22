@@ -1,51 +1,45 @@
-name: Test Submissions
+name: Test Student Submissions
 
 on:
-#  workflow_dispatch: # Manual trigger for flexibility
-  push:
-    branches:
-       - main
+  workflow_dispatch:
+    inputs:
+      sonar_token:
+        description: 'SonarQube Token'
+        required: true
 
 jobs:
   test-submissions:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Checkout your repository
-    - name: Checkout Test Framework Repo
+    - name: Checkout Org Repository
       uses: actions/checkout@v3
 
-    # 2. Set up Java
-    - name: Set up Java 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: 11
-        distribution: 'temurin'
-
-    # 3. Read repositories and clone them
-    - name: Read and Clone Repositories
-      id: clone-repos
+    - name: Read Repositories
+      id: read-repos
       run: |
-        mkdir -p submissions
-        while IFS= read -r repo; do
-          echo "Cloning $repo..."
-          git clone "https://github.com/Adityaraut2003/task-submissions.git" submissions/$(basename $repo)
-        done < repositories.txt
+        repos=$(cat repositories.txt | jq -R -s -c 'split("\n") | map(select(. != ""))')
+        echo "REPO_LIST=$repos" >> $GITHUB_ENV
 
-    # 4. Iterate through each cloned repository
-    - name: Test Each Submission
-      run: |
-        for repo in submissions/*; do
-          echo "Testing $(basename $repo)..."
-          cd $repo
-          mvn clean verify -Dcheckstyle.skip=true || echo "Tests failed for $(basename $repo)"
-          cd ../..
-        done
-
-    # 5. Collect and upload reports
-    - name: Upload Test Results
-      if: always() # Run even if some repositories fail
-      uses: actions/upload-artifact@v3
+    - name: Process Each Repository
+      uses: actions/checkout@v3
       with:
-        name: test-results
-        path: '**/target/surefire-reports/*'
+        repository: ${{ fromJson(env.REPO_LIST)[0] }} # Replace 0 with index in a loop
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Run Maven Tests
+      run: |
+        mvn clean verify
+
+    - name: Code Coverage Report
+      run: |
+        mvn jacoco:report
+
+    - name: SonarQube Analysis
+      env:
+        SONAR_TOKEN: ${{ secrets.sonar_token }}
+      run: |
+        mvn sonar:sonar \
+          -Dsonar.projectKey=test-cases \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=$SONAR_TOKEN
