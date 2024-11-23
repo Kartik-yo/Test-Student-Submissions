@@ -50,7 +50,7 @@ jobs:
 
     - name: SonarCloud Scan
       run: |
-        mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.organization=KashinathMeshram
 
     - name: Code Coverage Report
       run: |
