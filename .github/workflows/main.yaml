@@ -19,7 +19,7 @@ on:
  #       required: true
 
 jobs:
-  test-submissions:
+   test-submissions:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +53,7 @@ jobs:
       run: |
         mvn jacoco:report
 
-     - name: SonarQube Analysis
+    - name: SonarQube Analysis
       env:
         SONAR_TOKEN: 3a682c895e9426f2ab674fca11b5f88c51b23b73  # Ensure this token is set in GitHub secrets
       run: |
