@@ -48,9 +48,6 @@ jobs:
       run: |
         mvn clean verify
 
-    - name: SonarCloud Scan
-      run: |
-        mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.organization=KashinathMeshram
 
     - name: Code Coverage Report
       run: |
@@ -61,6 +58,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.sonar_token }}
       run: |
         mvn sonar:sonar \
-          -Dsonar.projectKey=test-cases \
+          -Dsonar.projectKey=Kartik-yo_test-cases \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=$SONAR_TOKEN
+          -Dsonar.login=3a682c895e9426f2ab674fca11b5f88c51b23b73
