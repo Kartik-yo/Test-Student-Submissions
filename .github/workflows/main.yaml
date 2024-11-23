@@ -46,7 +46,8 @@ jobs:
 
     - name: Run Maven Tests
       run: |
-        mvn clean verify
+        mvn clean install
+        mvn test
 
     - name: Code Coverage Report
       run: |
