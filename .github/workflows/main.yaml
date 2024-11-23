@@ -41,8 +41,8 @@ jobs:
     - name: Process Each Repository
       uses: actions/checkout@v3
       with:
-        repository: ${{ fromJson(env.REPO_LIST)[0] }} # Replace 0 with index in a loop
-        token: ${{ secrets.REPO_GITHUB_TOKEN }}
+        repository: "https://github.com/bootcoding-developer/bootcoding-java.git" #${{ fromJson(env.REPO_LIST)[0] }} # Replace 0 with index in a loop
+        #token: ${{ secrets.REPO_GITHUB_TOKEN }}
 
     - name: Run Maven Tests
       run: |
