@@ -62,3 +62,32 @@ jobs:
 #          -Dsonar.organization=KashinathMeshram \
 #          -Dsonar.host.url=https://sonarcloud.io \
 #          -Dsonar.login=3a682c895e9426f2ab674fca11b5f88c51b23b73
+    - name: Send Slack Notification on Success
+      if: success()
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}  # Slack webhook set in GitHub secrets
+      run: |
+        curl -X POST -H 'Content-type: application/json' --data '{
+          "text": "🎉 Build and analysis succeeded for Test Student Submissions!",
+          "attachments": [
+            {
+              "color": "good",
+              "text": "The build and analysis for the main branch were successful."
+            }
+          ]
+        }' $SLACK_WEBHOOK
+
+    - name: Send Slack Notification on Failure
+      if: failure()
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        curl -X POST -H 'Content-type: application/json' --data '{
+          "text": "❌ Build failed for Test Student Submissions!",
+          "attachments": [
+            {
+              "color": "danger",
+              "text": "The pipeline failed. Please check the logs for details."
+            }
+          ]
+        }' $SLACK_WEBHOOK
