@@ -41,8 +41,7 @@ jobs:
     - name: Process Each Repository
       uses: actions/checkout@v3
       with:
-        repository:  ${{ fromJson(env.REPO_LIST)[0] }} # "https://github.com/bootcoding-developer/bootcoding-java.git"  # Replace 0 with index in a loop
-        #token: ${{ secrets.REPO_GITHUB_TOKEN }}
+        repository:  ${{ fromJson(env.REPO_LIST)[0] }} 
 
     - name: Run Maven Tests
       run: |
@@ -53,15 +52,7 @@ jobs:
       run: |
         mvn jacoco:report
 
-#    - name: SonarQube Analysis
-#      env:
-#        SONAR_TOKEN: 3a682c895e9426f2ab674fca11b5f88c51b23b73  # Ensure this token is set in GitHub secrets
-#      run: |
-#        mvn sonar:sonar \
-#          -Dsonar.projectKey=Kartik-yo_test-cases \
-#          -Dsonar.organization=KashinathMeshram \
-#          -Dsonar.host.url=https://sonarcloud.io \
-#          -Dsonar.login=3a682c895e9426f2ab674fca11b5f88c51b23b73
+
     - name: Send Slack Notification on Success
       if: success()
       env:
